@@ -8,7 +8,8 @@ def reverse(word)
 	while i < word.length
 		char = word[i]
 		reversed = char + reversed
-		
+    # puts reversed
+
 		i += 1
 	end
 
