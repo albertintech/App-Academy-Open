@@ -30,12 +30,25 @@
 #   end
 # end
 
-arr = %w(a b c d)
+# arr = %w(a b c d)
+#
+# arr.each_with_index do |ele1, idx1|
+#   arr.each_with_index do |ele2, idx2|
+#     if idx2 > idx1
+#       puts ele1 + ele2
+#     end
+#   end
+# end
 
-arr.each_with_index do |ele1, idx1|
-  arr.each_with_index do |ele2, idx2|
-    if idx2 > idx1
-      puts ele1 + ele2
+arr = [
+  %w(a b c),
+  %w(d e),
+  %w(f g h)
+]
+
+arr.each do |sub_arr|
+  p sub_arr
+    sub_arr.each do |ele|
+      puts ele
     end
-  end
 end
