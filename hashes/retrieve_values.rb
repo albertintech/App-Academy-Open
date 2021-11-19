@@ -2,7 +2,8 @@
 # Write a method retrieve_values that takes in two hashes and a key. The method should return an array containing the values from the two hashes that correspond with the given key.
 
 def retrieve_values(hash1, hash2, key)
-
+  arr = []
+  arr << hash1[key] + ", " + hash2[key]
 end
 
 
