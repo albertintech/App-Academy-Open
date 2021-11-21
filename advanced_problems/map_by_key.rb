@@ -2,7 +2,7 @@
 # Write a method map_by_key that takes in an array of hashes and a key string. The method should returns a new array containing the values from each hash for the given key.
 
 def map_by_key(arr, key)
-
+  arr.map { |hash| hash[key] }
 end
 
 locations = [
