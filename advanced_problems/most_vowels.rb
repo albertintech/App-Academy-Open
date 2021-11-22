@@ -2,10 +2,9 @@
 # Write a method most_vowels that takes in a sentence string and returns the word of the sentence that contains the most vowels.
 
 def most_vowels(sentence)
-  arr = []
   arr = sentence.split
 
-  hsh = Hash.new(0)
+  hsh = {}
   arr.each { |word| hsh[word] = vowel_count(word) }
   sorted = hsh.sort_by { |k, v| v }
   return sorted.last[0]
