@@ -19,7 +19,7 @@ end
 
 def factors(num)
 factors = []
- (2...num).each do |divisor|
+ (1..num).each do |divisor|
    if num % divisor == 0
      factors << divisor
    end
