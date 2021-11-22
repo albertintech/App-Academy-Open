@@ -43,3 +43,24 @@ puts
 #
 # Reqs: New array of numbers replaces every even number with its greatest factor
 #   -Note: Greatest factor is the largest number that divides another number with no remainder. Do not include the number itself as the greatest factor.
+
+# AA Open Solution:
+# def greatest_factor_array(arr)
+#   new_arr = arr.map do |num|
+#     if num % 2 == 0
+#       greatest_factor(num)
+#     else
+#       num
+#     end
+#   end
+#
+#   return new_arr
+# end
+#
+# def greatest_factor(num)
+#   (1...num).reverse_each do |i|
+#     if num % i == 0
+#       return i
+#     end
+#   end
+# end
