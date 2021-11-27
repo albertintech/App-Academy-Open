@@ -27,3 +27,22 @@ p [1, 3, 5].count { |el| el.even? }             # => 0
 # sum
 # Return the total sum of all elements
 p [1, -3, 5].sum   # => 3
+p ["w", "or", "l", "d"].sum("hello, ") # => "hello, world"
+p [1, -3, 5].sum('Change each to string & concat: ') { |i| i.to_s }
+# => "Change each to string & concat: 1-35"
+
+# max and min
+# Return the maximum or minimum element
+p [1, -3, 5].min    # => -3
+p [1, -3, 5].max    # => 5
+p [].max            # => nil
+
+# flatten
+# Return the 1 dimensional version of any multidimensional array
+multi_d = [
+    [["a", "b"], "c"],
+    [["d"], ["e"]],
+    "f"
+]
+
+p multi_d.flatten   # => ["a", "b", "c", "d", "e", "f"]
