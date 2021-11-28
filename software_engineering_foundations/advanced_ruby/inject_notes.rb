@@ -19,16 +19,28 @@
 # p [11, 7, 2, 4].inject { |acc, el| acc * el } # => 616
 
 # Using inject to find the minimum value in an array:
-arr = [11, 7, 2, 4]
+# arr = [11, 7, 2, 4]
+#
+# def find_min(arr)
+#   arr.inject do |acc, el|
+#       if el < acc
+#           el
+#       else
+#           acc
+#       end
+#     end
+# end # => 2
+#
+# puts find_min(arr)
 
-def find_min(arr)
-  arr.inject do |acc, el|
-      if el < acc
-          el
-      else
-          acc
-      end
+# Inject with a default accumulator
+# In the last examples we described how the first element of the array will become the initial accumulator and the first iteration technically grabs the second element. We can also use inject by passing in our own initial accumulator. In this scenario, the acc will be our own value and the first el will be the first element of the array.
+
+# Here's an inject that sums up all even numbers of an array:
+[11, 7, 2, 4].inject(0) do |acc, el|
+    if el.even?
+        acc + el
+    else
+        acc
     end
-end # => 2
-
-puts find_min(arr)
+end # => 6
