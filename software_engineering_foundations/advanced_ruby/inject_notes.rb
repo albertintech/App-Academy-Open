@@ -37,10 +37,12 @@
 # In the last examples we described how the first element of the array will become the initial accumulator and the first iteration technically grabs the second element. We can also use inject by passing in our own initial accumulator. In this scenario, the acc will be our own value and the first el will be the first element of the array.
 
 # Here's an inject that sums up all even numbers of an array:
-[11, 7, 2, 4].inject(0) do |acc, el|
+result = [11, 7, 2, 4].inject(100) do |acc, el|
     if el.even?
         acc + el
     else
         acc
     end
 end # => 6
+
+p result
